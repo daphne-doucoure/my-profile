@@ -21,10 +21,30 @@
       text-align: center;
     }
 
+    .banner {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 60px;
+      background-color: #fff;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      font-weight: bold;
+      font-size: 18px;
+      color: #8e44ad;
+      z-index: 999;
+    }
+
     .container {
       width: 80%;
       margin: 0 auto;
       padding: 40px 20px;
+      padding-left: 80px; /* pour que le contenu ne soit pas caché par la bannière */
     }
 
     .content-box {
@@ -96,6 +116,8 @@
   </style>
 </head>
 <body>
+  <div class="banner">STUDENT</div>
+
   <div class="container">
     <h1>Hello, I'm Daphné 😎</h1>
     <img src="images/profil.JPG" class="img-circle" alt="Daphné Doucouré"/>
@@ -119,6 +141,64 @@
     <h2>Rider 🐎</h2>
     <p>I'm passionate about horse riding.</p>
   </div>
+
+  <div class="content-box">
+  <h2>Travel ✈️</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://tse4.mm.bing.net/th?id=OIP.TuDzWhZEFnll33Kxa_PSrwHaJ4&pid=Api" alt="Paris">
+      <h3>Paris</h3>
+    </div>
+    <div class="card">
+      <img src="https://tse3.mm.bing.net/th?id=OIP.6rz15CZYGfwfk0dLda6oWwHaE7&pid=Api" alt="Sénégal">
+      <h3>Sénégal</h3>
+    </div>
+    <div class="card">
+      <img src="https://tse4.mm.bing.net/th/id/OIP.MwanY3_CkAvYLovN9tdgiwHaOx?pid=Api" alt="Londres">
+      <h3>Londres</h3>
+    </div>
+  </div>
+</div>
+
+<style>
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    flex-basis: 280px;
+    flex-grow: 1;
+    max-width: 300px;
+    transition: transform 0.3s;
+  }
+
+  .card:hover {
+    transform: scale(1.03);
+  }
+
+  .card img {
+    width: 100px;
+    border-radius: 8px;
+  }
+
+  .card h3 {
+    flex-grow: 1;
+    padding-left: 15px;
+    font-size: 18px;
+    color: #8e44ad;
+    text-align: left;
+  }
+</style>
 
   <div class="centered-div">
     <h2>Follow me</h2>
